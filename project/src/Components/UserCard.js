@@ -6,6 +6,8 @@ const CardWrapper = styled.div`
   border-radius: 10px;
   margin: 2%;
   padding: 2%;
+  display: grid;
+  justify-items: center;
   img {
     width: 10%;
   }
@@ -15,10 +17,10 @@ const Card = props => {
   return (
     <CardWrapper>
       <img src={props.userData.avatar_url} alt="" />
-      <h1>{props.userData.name}</h1>
-      <h4>{props.userData.bio}</h4>
-      <h4>{props.userData.location}</h4>
-      <h4>Followers: {props.userData.followers}</h4>
+      <p>{props.userData.name}</p>
+      <p>{props.userData.bio}</p>
+      <p>{props.userData.location}</p>
+      <p>Followers: {props.userData.followers}</p>
     </CardWrapper>
   );
 };
